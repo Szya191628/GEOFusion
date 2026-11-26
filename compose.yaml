@@ -1,0 +1,20 @@
+services:
+  fusion:
+    build: .
+    ports: ["127.0.0.1:8090:8090"]
+    environment:
+      FUSION_API_TOKEN: ${FUSION_API_TOKEN:?Set a service token}
+      MODEL_BASE_URL: ${MODEL_BASE_URL:-}
+      MODEL_API_KEY: ${MODEL_API_KEY:-}
+      MODEL_NAME: ${MODEL_NAME:-}
+      FUSION_DATABASE: /srv/data/fusion.sqlite3
+      FUSION_ENV_FILE: /srv/data/settings.env
+      FUSION_CONTAINER_LOCAL: '1'
+    volumes: ["fusion-data:/srv/data"]
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    restart: unless-stopped
+volumes:
+  fusion-data:

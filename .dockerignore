@@ -1,0 +1,12 @@
+.venv
+.env
+.env.pending
+backups
+logs
+data
+__pycache__
+.pytest_cache
+**/__pycache__
+**/.git
+upstream/GEORank
+test_*.py

@@ -1,0 +1,6 @@
+﻿GEO Fusion v1.0
+目录：D:\360download\GEOFusion
+统一入口：http://127.0.0.1:8090/
+双击 start.cmd 启动；stop.cmd 停止；restart.cmd 重启。
+在网页「连接与设置」配置模型。
+完整使用说明见 RELEASE-v1.md。
